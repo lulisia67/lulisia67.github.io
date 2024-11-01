@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang='it'>
+
+<head>
+    <title>HYPER TEXT MARKUP LANGUAGE SEMPLICE</title>
+    <meta charset='utf-8'>
+    <!-- internal CSS in examples -->
+    <style>
+        /* 
+     *** table example cell styles
+    */
+        .bordered-example {
+            border-collapse: collapse;
+            border: 3px dashed aqua;
+            color: blue;
+        }
+
+        .bordered-example th,
+        .bordered-example td {
+            border: 2px solid orange;
+            text-align: center;
+        }
+
+        .bordered-example th {
+            color: white;
+            background-color: darkblue;
+            padding: 1ex;
+            padding-top: 2ex;
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+
+    <article>
+        <header>
+            <h1>HYPER TEXT MARKUP LANGUAGE SEMPLICE</h1>
+            <p class="tagline">
+                MANUALE DI UTILIZZO DEL LINGUAGGIO HTML
+            </p>
+            <div id="abstract">
+                <p>
+                    HTML (HyperText Markup Language) è il linguaggio di markup fondamentale per creare pagine web.
+                </p>
+                <p>
+
+                    Questo manuale ti guiderà attraverso le basi dell’HTML, fornendo informazioni su come strutturare i
+                    tuoi documenti, utilizzare i tag e creare contenuti interattivi.
+                </p>
+            </div>
+        </header>
+
+
+        <h2>1. Struttura di Base di un Documento HTML</h2>
+
+        <p>
+            Ogni documento HTML inizia con una dichiarazione che indica al browser che tipo di documento sta per
+            visualizzare. Ecco la struttura base:
+
+        </p>
+
+
+        <pre>
+&lt;!DOCTYPE html>
+&lt;html lang="it">
+ &lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>Titolo della Pagina/title>
+ &lt;/head>
+ &lt;body>
+   &lt;h1>Ciao, Mondo!/h1>
+   &lt;p>Benvenuti nel mondo di HTML.&lt;/p>
+ &lt;/body>
+&lt;/html>
+</pre>
+
+        <p>
+            Spiegazione dei Componenti:
+        </p>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Dichiara che si tratta di un documento HTML5.</li>
+            <li><code>&lt;html&gt;</code>: Inizio del documento HTML.</li>
+            <li><code>&lt;head&gt;</code>: Contiene metadati, link a fogli di stile e il titolo della pagina.</li>
+            <li><code>&lt;body&gt;</code>: Contiene il contenuto visibile della pagina.</li>
+        </ul>
+
+
+
+        <h2>2. I Tag HTML Fondamentali</h2>
+
+        <h3>2.1. Intestazioni</h3>
+        <p>
+            Le intestazioni sono utilizzate per creare titoli di vari livelli, tag <code>h1,h2,...,h6</code>:
+        </p>
+
+        <pre>
+&lt;h1>Intestazione di Livello 1&lt;/h1>
+&lt;h3>Intestazione di Livello 2&lt;/h3>
+&lt;h3>Intestazione di Livello 3&lt;/h3>
+</pre>
+
+
+        <h3>2.2. Paragrafi</h3>
+        <p>
+            Per creare un nuovo paragrafo, usa il tag <code>p</code>:
+        </p>
+
+        <pre>
+&lt;p>Questo è un paragrafo.&lt;/p>
+&lt;p>Questo è un altro paragrafo.&lt;/p>
+</pre>
+
+        <div class="example">
+            <p>Questo è un paragrafo.</p>
+            <p>Questo è un altro paragrafo.</p>
+        </div>
+
+
+
+        <h3>2.3. Link</h3>
+        <p>
+            Per inserire un link, utilizza il tag <code>a</code>:
+        </p>
+
+        <pre>
+&lt;a href="https://www.example.com">Visita Example.com&lt;/a>
+</pre>
+
+        <div class="example">
+            <a href="https://www.example.com">Visita Example.com</a>
+        </div>
+
+
+
+        <h3>2.4. Immagini</h3>
+        <p>
+            Per inserire un'immagine, utilizza il tag <code>img</code>:
+        </p>
+
+        <pre>
+&lt;img src="immagine.jpg" alt="Descrizione dell'immagine">
+</pre>
+
+        <pre>
+    &lt;img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png" alt="GMail logo">
+</pre>
+
+        <div class="example">
+            <img src="immagine.jpg" alt="Descrizione dell'immagine">
+            <br>
+            <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png" alt="GMail logo">
+
+        </div>
+
+        <h3>2.5. Liste</h3>
+        <p>
+            Puoi creare liste ordinate o non ordinate:
+        </p>
+
+        <pre>
+&lt;ul>
+   &lt;li>Elemento 1&lt;/li>
+   &lt;li>Elemento 2&lt;/li>
+&lt;/ul>
+</pre>
+
+        <pre>
+&lt;ol>
+   &lt;li>Primo Elemento&lt;/li>
+   &lt;li>Secondo Elemento&lt;/li>
+&lt;/ol>
+</pre>
+
+        <div class="example">
+
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+            <ol>
+                <li>Primo Elemento</li>
+                <li>Secondo Elemento</li>
+            </ol>
+
+        </div>
+
+
+        <h2>3. Formattazione del Testo</h2>
+
+        <p>
+            Puoi formattare il testo usando vari tag:
+        </p>
+
+        <pre>
+&lt;strong>Testo in grassetto&lt;/strong>
+&lt;em>Testo in corsivo&lt;/em>
+&lt;small>Testo in piccolo&lt;/small>
+</pre>
+
+        <div class="example">
+            <strong>Testo in grassetto</strong><br>
+            <em>Testo in corsivo</em><br>
+            <small>Testo in piccolo</small><br>
+        </div>
+
+
+
+
+        <h2>4. Moduli</h2>
+        <p>
+            I moduli consentono di raccogliere informazioni dagli utenti, tag <code>form</code>:
+        </p>
+
+        <pre>
+&lt;form action="/invia" method="post">
+&lt;label for="nome">Nome:&lt;/label>
+&lt;input type="text" id="nome" name="nome" required>
+&lt;input type="submit" value="Invia">
+&lt;/form>
+</pre>
+
+        <div class="example">
+            <form action="/invia" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <input type="submit" value="Invia">
+            </form>
+
+        </div>
+
+        <h2>5. Tabelle</h2>
+        <p>
+            Puoi creare tabelle con il tag <code>table</code>:
+        </p>
+
+        <pre>
+&lt;table>
+&lt;tr>
+&lt;th>Intestazione 1&lt;/th>
+&lt;th>Intestazione 2&lt;/th>
+&lt;/tr>
+&lt;tr>
+&lt;td>Dati 1&lt;/td>
+&lt;td>Dati 2&lt;/td>
+&lt;/tr>
+&lt;/table>
+</pre>
+
+        <div class="example">
+            <table class="bordered-example">
+                <tr>
+                    <th>Intestazione 1</th>
+                    <th>Intestazione 2</th>
+                </tr>
+                <tr>
+                    <td>Dati 1</td>
+                    <td>Dati 2</td>
+                </tr>
+                <tr>
+                    <td>Dati 1</td>
+                    <td>Dati 2</td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        <h2>6. Incorporamento di Video e Audio</h2>
+        <p>
+            Per aggiungere contenuti multimediali:, tag <code>video, audio controls</code>:
+        </p>
+
+        <pre>
+&lt;video controls>
+&lt;source src="video.mp4" type="video/mp4">
+    Il tuo browser non supporta il video.
+&lt;/video>
+</pre>
+
+
+        <pre>
+&lt;audio controls>
+&lt;source src="audio.mp3" type="audio/mp3">
+  Il tuo browser non supporta l'audio.
+&lt;/audio>
+</pre>
+
+
+        <h2>7. Best Practices</h2>
+
+        <h3>7.1 Tag Semantici</h3>
+        <p>
+            Uso dei tag semantici: Preferisci tag come <code>header, footer, article, section</code> per migliorare la
+            leggibilità e l'accessibilità.
+        </p>
+
+        <h3>7.2 Commenti</h3>
+        <p>
+            Commenti nel codice: Usa i commenti per annotare il tuo codice:
+        </p>
+
+        <pre>
+&lt;!-- Questo è un commento a linea singola--&gt;
+
+&lt;!--
+   ********************************************* 
+   *** Questo è un commento
+   *** multi-linea
+   *** ...
+   *********************************************
+--&gt;
+
+
+&lt;!-- (commento codice html) -----------------
+   &lt;h3>testo non visualizzato&lt;/h3>
+   &lt;p>bla, bla, bla ...&lt;/p>
+--&gt;
+
+
+</pre>
+
+        <h3>7.3 Validazione</h3>
+        <p>
+            Utilizza strumenti di validazione per assicurarti che il tuo codice sia conforme agli standard HTML.
+        </p>
+
+        <p>
+            Possibile ricorrere a servizi di validazione online:
+        </p>
+
+        <ul>
+            <li><a href="https://validator.w3.org/"><img id="w3clogo"
+                        src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg"
+                        alt="W3C Markup validation service">Markup validation service</a></li>
+        </ul>
+
+        <hr>
+
+
+        <h2>Conclusione</h2>
+
+        <p>
+            Questo manuale ti ha fornito una panoramica delle basi dell’HTML. Con pratica e sperimentazione, potrai
+            creare pagine web sempre più complesse e interattive. Buona fortuna nel tuo viaggio nel mondo della
+            programmazione web!
+        </p>
+
+
+        <footer>
+            <ul>
+                <li><a href="pagina-1-Intro.html"><i>INTRODUZIONE</i></a></li>
+                <li><a href="pagina-1-Storia.html"><i>STORIA</i></a></li>
+                <li><a href="pagina-1.html"><i>PAGINA INIZIALE</i></a></li>
+            </ul>
+            <address>
+                <p style="margin-top:5em"><i>CREATO DA:<br><a href="https://github.com/lulisia67">lulisia67</a></i></p>
+
+            </address>
+        </footer>
+
+
+    </article>
+
+
+</body>
+
+</html>
