@@ -1,0 +1,99 @@
+/*
+*****************************************************
+*** Cascade Style Sheet (CSS) for simple page
+*****************************************************
+*/
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+
+}
+
+header {
+    background-color: aliceblue;
+    margin: 3ex;
+    padding: 2ex
+}
+
+header p.tagline {
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    font-style: italic;
+}
+
+header #abstract {
+    font-weight: 300;
+    font-style: italic;
+}
+
+footer {
+    background-color: #606060;
+    color:aliceblue;
+    margin-top: 3ex;
+    padding: 1ex;
+    text-align:center;
+}
+
+footer a {
+    color:cyan;
+    text-decoration: none;
+}
+footer a:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+footer > ul> li {
+    display: inline-block;
+    border: 2px solid azure;
+    padding: 5px 30px;
+}
+
+footer > ul> li:hover {
+    background-color: darkblue;
+}
+
+footer address {
+    font-size:small;
+    font-style: italic;
+}
+
+footer address > p {
+    text-align: right;
+}
+
+
+code {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    background-color: gold;
+    color: black;
+
+}
+
+pre {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    background-color: azure;
+    color: black;
+    padding: 2ex;
+    border: groove;
+    overflow: auto;
+}
+
+div.example {
+    background-color: cornsilk;
+    padding: 2ex;
+    border: 1px solid #808080;
+
+}
