@@ -389,8 +389,7 @@ I'll help you create a pure recursive implementation of prime factorization in M
 
 This approach beautifully illustrates how functional programming can solve complex problems through simple, recursive function definitions rather than imperative loops and variable updates.
 
-
-#A1: Gemini Diffusion
+# A1: Gemini Diffusion
 
 Okay, let's explore a pure functional approach to finding prime factors in Mathematica. We'll define the functions as requested, focusing on recursion and avoiding explicit loops like For or While.
 
