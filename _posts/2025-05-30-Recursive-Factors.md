@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Homeworks
+title: Prime Factors Recursive Algo
 ---
 
 Recursion: `factor`.
 
 
-#Q1: Recursive Factorization in Mathematica 
+# Q1: Recursive Factorization in Mathematica 
 
 ```
 You are a secondary school computer science teacher. 
@@ -18,26 +18,26 @@ The implementation must be as simple as possible, with the additional definition
 
 Provide a snippet of Mathematica code with a simple and commented implementation of the following functions:
 
-   * divides(m,n): boolean - Returns True if n is a multiple of m, False otherwise. Implement this function using only integer division, without the use of the modulo/remainder operator.
-   * find_min_factor(i,n): recursive - Returns the smallest integer m greater than or equal to i that divides n.
-   * my_factor(n): list of integer - Returns the list of prime factors of n, with repetitions, in increasing order. Implement this function using a pure recursive approach, without loops or variable modifications.
+* `divides(m,n): boolean` - Returns True if n is a multiple of m, False otherwise. Implement this function using only integer division, without the use of the modulo/remainder operator.
+* `find_min_factor(i,n): integer` - recursive. Returns the smallest integer m greater than or equal to i that divides n.
+* `my_factor(n): list of integer` - Returns the list of prime factors of n, with repetitions, in increasing order. Implement this function using a pure recursive approach, without loops or variable modifications.
 
 Ensure your implementation adheres to the following constraints:
 
-   * The code must be in Mathematica language.
-   * The implementation must be pure recursive, avoiding loops and variable modifications.
-   * The divides(m,n) function must use only integer division.
-   * The code should be well-commented to explain the logic and functionality of each function.
+* The code must be in Mathematica language.
+* The implementation must be pure recursive, avoiding loops and variable modifications.
+* The divides(m,n) function must use only integer division.
+* The code should be well-commented to explain the logic and functionality of each function.
 
 Here's how the functions should behave:
 
-   * divides(m, n) should return True if n is divisible by m without any remainder, and False otherwise.
-   * find_min_factor(i, n) should recursively search for the smallest factor of n starting from i.
-   * my_factor(n) should return a list containing all prime factors of n, including repetitions, sorted in ascending order. For example, my_factor(12) should return {2, 2, 3}.
+* `divides(m, n)` should return True if n is divisible by m without any remainder, and False otherwise.
+* `find_min_factor(i, n)` should recursively search for the smallest factor of n starting from i.
+* `my_factor(n)` should return a list containing all prime factors of n, including repetitions, sorted in ascending order. For example, my_factor(12) should return {2, 2, 3}.
 
 
 
-#A1: Gemini
+# A1: Gemini
 
 **Conceptualizing the Approach**
 
@@ -398,84 +398,57 @@ Here's the Mathematica code with comments explaining each part:
 
 ```mathematica
 (* Function to check if n is a multiple of m using integer division. *)
-
 (* It returns True if n divided by m results in an integer. *)
 
 divides[m_, n_] := IntegerQ[n / m];
 
-
 (* Recursive function to find the minimum factor of n starting from i. *)
-
 (* It checks if i divides n. If it does, i is the minimum factor. *)
-
 (* Otherwise, it recursively calls itself with i+1. *)
 
 find_min_factor[i_, n_] := If[
-
   divides[i, n],
-
   i, (* If i divides n, it's the minimum factor starting from i. *)
-
   If[
-
     i * i > n, (* Optimization: If i*i > n, it means we haven't found a factor
-
                  up to sqrt(n), so n itself must be prime (or 1, which is handled
-
                  by the base case of my_factor). In this case, n is the minimum factor. *)
-
     n,
-
     find_min_factor[i + 1, n] (* Otherwise, try the next integer i+1. *)
-
   ]
-
 ];
 
-
 (* Main recursive function to find the prime factors of n. *)
-
 (* Base case: If n is 1, it has no prime factors, so return an empty list. *)
 
 my_factor[1_] := {};
 
-
 (* Recursive step: *)
-
 (* 1. Find the minimum factor 'm' of n using find_min_factor[2, n]. *)
-
 (*    (We start searching for factors from 2). *)
-
 (* 2. 'm' is a prime factor. *)
-
 (* 3. Prepend 'm' to the result of recursively calling my_factor on the quotient (n / m). *)
 
 my_factor[n_] := Module[{m = find_min_factor[2, n]},
-
   Prepend[my_factor[n / m], m]
-
 ];
 
 
 (* Example usage: *)
 
 (* my_factor[12] *)
-
 (* Expected output: {2, 2, 3} *)
 
 
 (* my_factor[17] *)
-
 (* Expected output: {17} *)
 
 
 (* my_factor[1] *)
-
 (* Expected output: {} *)
 
 
 (* my_factor[100] *)
-
 (* Expected output: {2, 2, 5, 5} *)
 ```
 
