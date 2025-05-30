@@ -12,13 +12,10 @@ Recursion: `factor`.
 
 # Q1: Recursive Factorization in Mathematica 
 
-```
-You are a secondary school computer science teacher. 
-Your task is to introduce the functional programming paradigm by providing a pure recursive implementation, 
-in Mathematica language, for a simplified "factor()" function, called "my_factor". 
-This function takes a positive integer 'n' as input and returns a list of the prime factors (with repetition) that factorize the given 'n' argument. 
-The implementation must be as simple as possible, with the additional definition of two auxiliary functions: `divides(m,n)` and `find_min_factor(i,n)`.
-```
+> You are a secondary school computer science teacher. 
+> Your task is to introduce the functional programming paradigm by providing a pure recursive implementation, in Mathematica language, for a simplified "factor()" function, called "my_factor". 
+> This function takes a positive integer 'n' as input and returns a list of the prime factors (with repetition) that factorize the given 'n' argument. 
+> The implementation must be as simple as possible, with the additional definition of two auxiliary functions: `divides(m,n)` and `find_min_factor(i,n)`.
 
 Provide a snippet of Mathematica code with a simple and commented implementation of the following functions:
 
@@ -91,6 +88,7 @@ I'm now completely satisfied with the design and implementation. The code is com
 Here's the Mathematica code snippet implementing `divides`, `find_min_factor`, and `my_factor` as pure recursive functions, adhering to all specified constraints.
 
 ```mathematica
+
 (*
 ** Functional Programming: Prime Factorization - A Pure Recursive Approach **
 
