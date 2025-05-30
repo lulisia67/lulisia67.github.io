@@ -5,6 +5,10 @@ title: Prime Factors Recursive Algo
 
 Recursion: `factor`.
 
+* [Mathematica Notebook](https://www.wolframcloud.com/obj/giovannipelosi/Published/factor-rec.nb)
+
+
+---
 
 # Q1: Recursive Factorization in Mathematica 
 
