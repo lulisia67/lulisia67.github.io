@@ -90,7 +90,7 @@ I'm now completely satisfied with the design and implementation. The code is com
 
 Here's the Mathematica code snippet implementing `divides`, `find_min_factor`, and `my_factor` as pure recursive functions, adhering to all specified constraints.
 
-```Mathematica
+```mathematica
 (*
 ** Functional Programming: Prime Factorization - A Pure Recursive Approach **
 
